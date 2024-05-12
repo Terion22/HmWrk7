@@ -17,7 +17,7 @@ services:
     ports:
       - '8080:80'
     volumes:
-      - 'common_volume:/usr/local/superproject/war-web-project/target/'
+      - 'common_volume:/usr/local/tomcat/webapps/'
 volumes:
   common_volume:
 ...
