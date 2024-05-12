@@ -18,8 +18,8 @@ services:
     ports:
       - '8080:80'
     volumes:
-      - common volume:/home/elshl/superproject/war-web-project/target/
+      - common_volume:/home/elshl/superproject/war-web-project/target/
 
 volumes:
-  common volume:
+  common_volume:
 ...
