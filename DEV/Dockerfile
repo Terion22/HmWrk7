@@ -9,7 +9,7 @@ WORKDIR /usr/local/src
 RUN git clone https://github.com/koddas/war-web-project.git
 RUN chmod -R 777 ./
 #Transfer to project's directory where pom.xml + running maven
-WORKDIR /usr/local/src/war-web-project/target/
+WORKDIR /usr/local/src/war-web-project
 RUN mvn package
 #Transfer the step to tomcat
 #FROM tomcat:9-jre8-temurin-focal
