@@ -7,7 +7,6 @@ services:
       dockerfile: Dockerfile
     volumes:
       - 'common_volume:/usr/local/src/war-web-project/target'
-#------------------------------------------------------------------------
   prd:
     build:
       context: ./PRD
