@@ -1,4 +1,4 @@
-FROM ubuntu:18.04
+FROM ubuntu:20.04
 
 RUN apt install git -y && apt install default-jdk -y
 RUN apt install maven -y
