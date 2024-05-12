@@ -12,10 +12,10 @@ services:
     build:
       context: ./PRD
       dockerfile: Dockerfile
+    ports:
+      - '8080:8080'
     depends_on:
       - dev
-    ports:
-      - '8080:80'
     volumes:
       - 'common_volume:/usr/local/tomcat/webapps/'
 volumes:
