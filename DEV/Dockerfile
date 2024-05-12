@@ -3,9 +3,7 @@ FROM ubuntu:20.04 as build
 #Solution of the problem of strict choosing timmezone
 RUN apt update && DEBIAN_FRONTEND=noninteractive apt install -y tzdata
 #Install soft and update applications
-RUN apt install git -y \
- && apt install default-jdk -y \
- && apt install maven -y \
+RUN apt install git -y && apt install default-jdk -y && apt install maven -y
 #Download the project from GIT to the new directory
 WORKDIR /usr/local/src
 RUN git clone https://github.com/koddas/war-web-project.git
