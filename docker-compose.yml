@@ -6,7 +6,7 @@ services:
       context: ./DEV #https://github.com/Terion22/Docker_practice2.git
       dockerfile: Dockerfile
     volumes:
-      - 'common_volume:/usr/local/superproject/war-web-project/target/'
+      - 'common_volume:/usr/local/src/war-web-project/target/'
 #------------------------------------------------------------------------
   prd:
     build:
