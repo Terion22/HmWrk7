@@ -8,14 +8,14 @@ RUN apt install git -y && apt install default-jdk -y
 RUN apt install maven -y
 
 #Download the project from GIT to the new directory
-WORKDIR /var/app/DEV1
+WORKDIR /home/elshl/superproject
 RUN git clone https://github.com/koddas/war-web-project.git
 RUN chmod -R 777 ./
 
 #Transfer to project's directory where pom.xml + running maven
-WORKDIR /var/app/DEV1/war-web-project/
+WORKDIR /home/elshl/superproject/war-web-project/
 RUN mvn package
 
 #Transfer the step to tomcat
 FROM tomcat:9-jre8-temurin-focal
-COPY --from=build /var/app/DEV1/war-web-project/target/*.war /usr/local/tomcat/webapps/
+COPY --from=build /home/elshl/superproject/war-web-project/target/*.war /usr/local/tomcat/webapps/

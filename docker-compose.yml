@@ -4,7 +4,9 @@ services:
   dev:
     build:
       context: ./DEV #https://github.com/Terion22/Docker_practice2.git
-
+      dockerfile: Dockerfile
+    volumes:
+      -
 
   prd:
     build:
