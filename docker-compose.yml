@@ -1,0 +1,11 @@
+---
+version: '3.8'
+services:
+  dev:
+    build:
+      context: ./DEV #https://github.com/Terion22/Docker_practice2.git
+
+
+  prd:
+    build:
+      context: ./PRD
