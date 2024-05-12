@@ -7,15 +7,16 @@ services:
       dockerfile: Dockerfile
     volumes:
       - common_volume:/home/elshl/superproject/war-web-project/target/
+#------------------------------------------------------------------------
 
   prd:
     build:
       context: ./PRD
       dockerfile: Dockerfile
-    potrs:
-      8080:80
     depends_on:
       - dev
+    ports:
+      - '8080:80'
     volumes:
       - common volume:/home/elshl/superproject/war-web-project/target/
 
