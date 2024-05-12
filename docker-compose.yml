@@ -6,7 +6,7 @@ services:
       context: ./DEV #https://github.com/Terion22/Docker_practice2.git
       dockerfile: Dockerfile
     volumes:
-      - common_volume:/home/elshl/superproject/war-web-project/target/
+      - 'common_volume:/home/elshl/superproject/war-web-project/target/'
 #------------------------------------------------------------------------
 
   prd:
@@ -18,7 +18,7 @@ services:
     ports:
       - '8080:80'
     volumes:
-      - common_volume:/home/elshl/superproject/war-web-project/target/
+      - 'common_volume:/home/elshl/superproject/war-web-project/target/'
 
 volumes:
   common_volume:
