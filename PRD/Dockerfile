@@ -7,4 +7,4 @@ WORKDIR /usr/local/tomcat/webapps/
 RUN pwd
 RUN ls
 FROM tomcat:9-jre8-temurin-focal
-COPY --from=buildp /usr/local/src/war-web-project/target/*.war /usr/local/tomcat/webapps/
+COPY --from=buildp /var/lib/docker/volumes/hmwrk7_common_volume/_data/*.war /usr/local/tomcat/webapps/
