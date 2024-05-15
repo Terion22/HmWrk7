@@ -16,7 +16,7 @@ services:
     depends_on:
       - dev
     volumes:
-      - 'common_volume:/usr/local/tomcat/webapps/'
+      - 'common_volume:/opt/tomcat/webapps/'
 volumes:
   common_volume:
 ...
