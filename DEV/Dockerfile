@@ -8,7 +8,7 @@ RUN apt update -y && \
 
 WORKDIR /tmp/koddas
 RUN git clone http://github.com/koddas/war-web-project.git
-RUN chmod -R 644 ./
+RUN chmod -R 777 ./
 #Go to project's directory where pom.xml + running maven
 WORKDIR /tmp/koddas/war-web-project/
 RUN mvn package
