@@ -3,13 +3,13 @@ version: '3'
 services:
   dev:
     build:
-      context: ./dev
+      context: ./DEV
       dockerfile: Dockerfile
     volumes:
-      - 'common_volume:/usr/local/war-web-project/target'
+      - 'common_volume:/tmp/koddas/war-web-project/target'
   prd:
     build:
-      context: ./prd
+      context: ./PRD
       dockerfile: Dockerfile
     ports:
       - '8080:8080'
