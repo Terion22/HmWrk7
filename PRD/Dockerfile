@@ -6,6 +6,5 @@ WORKDIR /tmp/koddas/war-web-project/target
 
 FROM tomcat:9-jre8-temurin-focal
 COPY --from=buildp /tmp/koddas/war-web-project/target/*.war /var/lib/tomcat9/webapps/
+VOLUME /tmp/koddas/war-web-project/target
 WORKDIR /var/lib/tomcat9/webapps/
-
-CMD ["catalina.sh", "run"]
