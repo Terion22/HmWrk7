@@ -7,7 +7,6 @@ services:
       dockerfile: Dockerfile
     volumes:
       - 'com_vol:/usr/local/src/war-web-project/target/'
-#------------------------------------------------------------------------
   prd:
     build:
       context: ./PRD
@@ -17,7 +16,7 @@ services:
     depends_on:
       - dev
     volumes:
-      - 'com_vol:/usr/local/tomcat/webapps/'
+      - 'com_vol:/opt/tomcat/webapps'
 volumes:
   com_vol:
 ...

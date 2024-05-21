@@ -1,8 +1,8 @@
-FROM alpine:3.10 as buildp
-RUN  apk update \
-  && apk add git \
-  && apk add maven \
-  && apk --n-cache add openjdk8 --repository=https://dl-cdn.alpinelinux.org/alpine/edge/community/x86_64
-WORKDIR /usr/local/src/war-web-project/target/
-FROM tomcat:9-jre8-temurin-focal
-COPY --from=buildp /usr/local/src/war-web-project/target/*.war /usr/local/tomcat/webapps/
+FROM openjdk:8-jdk-alpine
+RUN  wget https://dlcdn.apache.org/tomcat/tomcat-8/v8.5.100/src/apache-tomcat-8.5.100-src.tar.gz
+RUN tar -xzvf apache tomcat-8.5.100.tar.gz
+RUN mv apache-tomcat-8.5.100 /opt/tomcat
+RUN rm apache-tomcat-8.5.100.tar.gz
+RUN chmod 777 /opt/tomcat/bin/*.sh
+
+CMD ["/opt/tomcat/bin/catalina.sh","run"]
