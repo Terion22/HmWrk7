@@ -5,4 +5,4 @@ RUN mv apache-tomcat-8.0.3-deployer /opt/tomcat/
 RUN rm apache-tomcat-8.0.3-deployer.tar.gz
 RUN chmod -R 777 /opt/tomcat/bin/*.sh
 
-CMD ["/opt/tomcat/bin/catalina.sh","run"]
+CMD ["catalina.sh","run"]
