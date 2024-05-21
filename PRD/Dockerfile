@@ -6,6 +6,6 @@
 
 FROM tomcat:9.0-jdk13-openjdk-oracle
 VOLUME /tmp/koddas/war-web-project/target
-COPY /tmp/koddas/war-web-project/target/*.war /var/lib/tomcat9/webapps.dist/manager
-COPY /var/lib/tomcat9/webapps.dist/manager /var/lib/tomcat9/webapps/
-WORKDIR /var/lib/tomcat9/webapps
+RUN cp /tmp/koddas/war-web-project/target/*.war /var/lib/tomcat9/webapps.dist/manager
+RUN cp -avT $CATALINA_HOME/webapps.dist/manager $CATALINA_HOME/webapps/manager
+WORKDIR $CATALINA_HOME/webapps/manager
