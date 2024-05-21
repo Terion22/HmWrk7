@@ -1,8 +1,6 @@
-FROM openjdk:8-jdk-alpine
-RUN  wget https://archive.apache.org/dist/tomcat/tomcat-8/v8.5.100/bin/apache-tomcat-8.5.100.tar.gz
-RUN tar -xzvf apache-tomcat-8.5.100.tar.gz
-RUN mv apache-tomcat-8.5.100 /opt/tomcat/
-RUN rm apache-tomcat-8.5.100.tar.gz
-RUN chmod +x /opt/tomcat/bin/*.sh
+FROM tomcat:9-jre8-temurin-focal
+WORKDIR /etc/tomcat
+RUN chmod -R 777 /etc/tomcat
+EXPOSE 8080
 
-CMD ["/opt/tomcat/bin/catalina.sh","run"]
+CMD ["catalina.sh","run"]
