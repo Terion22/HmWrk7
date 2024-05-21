@@ -18,5 +18,5 @@ services:
     volumes:
       - 'vol:/opt/tomcat/webapps'
 volumes:
-  volumeD:
+  vol:
 ...
