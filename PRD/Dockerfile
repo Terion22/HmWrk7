@@ -1,6 +1,7 @@
-FROM tomcat:9-jre8-temurin-focal
-WORKDIR /etc/tomcat
-RUN chmod -R 777 /etc/tomcat
-EXPOSE 8080
+FROM alpine:3.10 as buildp
+RUN  apk update \
+  && apk --n-cache add openjdk8 --repository=https://dl-cdn.alpinelinux.org/alpine/edge/community/x86_64
+WORKDIR /tmp/koddas/war-web-project/target
 
-CMD ["catalina.sh","run"]
+FROM tomcat:9-jre8-temurin-focal
+COPY --from=buildp /tmp/koddas/war-web-project/target/*.war /var/lib/tomcat9/webapps/
