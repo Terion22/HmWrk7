@@ -4,4 +4,4 @@ RUN  apk update -y && \
 #WORKDIR /tmp/koddas/war-web-project/target
 
 FROM tomcat:9-jre8-temurin-focal
-COPY --from=buildp /tmp/koddas/war-web-project/target/wwp-1.0.0.war /opt/tomcat/webapps/
+COPY --from=buildp /usr/koddas/war-web-project/target/*.war /opt/tomcat/webapps/

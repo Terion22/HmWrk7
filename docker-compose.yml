@@ -6,7 +6,7 @@ services:
       context: ./DEV
       dockerfile: Dockerfile1
     volumes:
-      - 'volumeD:/tmp/koddas/war-web-project'
+      - 'vol:/usr/koddas/war-web-project/target'
   prd:
     build:
       context: ./PRD
@@ -16,7 +16,7 @@ services:
     depends_on:
       - dev
     volumes:
-      - 'volumeD:/opt/tomcat/webapps'
+      - 'vol:/opt/tomcat/webapps'
 volumes:
   volumeD:
 ...
