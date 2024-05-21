@@ -4,19 +4,19 @@ services:
   dev:
     build:
       context: ./DEV
-      dockerfile: Dockerfile
+      dockerfile: Dockerfile1
     volumes:
-      - 'com_vol:/tmp/koddas/war-web-project/target'
+      - 'c_vol:/tmp/koddas/war-web-project/target'
   prd:
     build:
       context: ./PRD
-      dockerfile: Dockerfile
+      dockerfile: Dockerfile2
     ports:
       - '8080:8080'
     depends_on:
       - dev
     volumes:
-      - 'com_vol:/opt/tomcat/webapps'
+      - 'c_vol:/opt/tomcat/webapps'
 volumes:
   com_vol:
 ...
