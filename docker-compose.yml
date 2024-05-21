@@ -4,13 +4,13 @@ services:
   dev:
     build:
       context: ./DEV
-      dockerfile: Dockerfile
+      dockerfile: Dockerfile1
     volumes:
       - 'common_volume:/tmp/koddas/war-web-project/target'
   prd:
     build:
       context: ./PRD
-      dockerfile: Dockerfile
+      dockerfile: Dockerfile2
     ports:
       - '8080:8080'
     depends_on:
