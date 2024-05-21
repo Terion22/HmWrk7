@@ -1,16 +1,16 @@
 ---
-version: '3.8'
+version: '3'
 services:
   dev:
     build:
       context: ./DEV
-      dockerfile: Dockerfile1
+      dockerfile: Dockerfile
     volumes:
       - 'c_vol:/tmp/koddas/war-web-project/target'
   prd:
     build:
       context: ./PRD
-      dockerfile: Dockerfile2
+      dockerfile: Dockerfile
     ports:
       - '8080:8080'
     depends_on:
