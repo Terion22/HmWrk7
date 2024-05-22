@@ -9,7 +9,6 @@ RUN mv apache-tomcat-8.5.100 /opt/tomcat/
 RUN rm apache-tomcat-8.5.100.tar.gz
 RUN chmod +x /opt/tomcat/bin/*.sh
 
-ADD /tmp/koddas/war-web-project/target/*war
 COPY /tmp/koddas/war-web-project/target/*war /usr/local/tomcat/webapps
 WORKDIR /usr/local/tomcat/webapps
 #CMD chmod +x /usr/local/tomcat/bin/catalina.sh
