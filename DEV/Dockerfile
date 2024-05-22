@@ -6,3 +6,4 @@ RUN git clone https://github.com/koddas/war-web-project.git
 RUN chmod -R 777 ./
 WORKDIR /tmp/koddas/war-web-project
 RUN mvn package
+VOLUME /tmp/koddas/war-web-project/target
