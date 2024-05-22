@@ -1,11 +1,9 @@
 FROM ubuntu:18.04
-USER root
-RUN apt update && \
-    apt install git -y && \
-    apt install default-jdk -y && \
-    apt install maven -y
+RUN apt update
+RUN apt install -y git default-jdk maven
 WORKDIR /tmp/koddas
 RUN git clone https://github.com/koddas/war-web-project.git
-RUN chmod -R 644 ./
+RUN chmod -R 777 ./
 WORKDIR /tmp/koddas/war-web-project
 RUN mvn package
+VOLUME /tmp/koddas/war-web-project/target
