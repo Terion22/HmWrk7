@@ -9,4 +9,4 @@ RUN mv apache-tomcat-9.0.39 /opt/tomcat9
 RUN rm apache-tomcat-9.0.39.tar.gz
 RUN chmod -R +x /opt/tomcat9
 WORKDIR /usr/local/tomcat9/webapps
-CMD ["/opt/tomcat/bin/catalina.sh","run"]
+CMD ["/opt/tomcat9/bin/catalina.sh","run"]
