@@ -6,7 +6,7 @@ services:
       context: ./DEV
       dockerfile: Dockerfile
     volumes:
-      - 'c_vol:/tmp/koddas/war-web-project/target'
+      - 'c_vol:/tmp/koddas/war-web-project/target/wwp-1.0.0.war'
   prd:
     build:
       context: ./PRD
