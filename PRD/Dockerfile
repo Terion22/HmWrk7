@@ -13,12 +13,4 @@ WORKDIR /tmp/koddas/war-web-project/target
 COPY /tmp/koddas/war-web-project/target/*war /usr/local/tomcat/webapps
 CMD ["/opt/tomcat/bin/catalina.sh","run"]
 
-#FROM FROM psmiraglia/tomcat8:8.5.13
-#USER root
-#RUN apk add --no-cache --update tzdata && rm -fr /var/cache/apk/*
-#ENV TZ=Europe/Rome
-
-#COPY /tmp/koddas/war-web-project/target/*.war ${TOMCAT_HOME}/webapps/
-#RUN chown -R ${TOMCAT_USER}:${TOMCAT_GROUP} ${TOMCAT_HOME}
-#USER ${TOMCAT_USER}
 
