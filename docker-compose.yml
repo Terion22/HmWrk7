@@ -16,6 +16,6 @@ services:
     depends_on:
       - dev
     volumes:
-      - 'var/lib/docker/volumes/hmwrk7_c_vol/_data:/opt/tomcat/webapps'
+      - 'var/lib/docker/volumes/hmwrk7_c_vol/_data/wwp-1.0.0.war:/opt/tomcat/webapps'
 volumes:
   c_vol:
