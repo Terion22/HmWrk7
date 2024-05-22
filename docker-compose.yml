@@ -16,6 +16,6 @@ services:
     depends_on:
       - dev
     volumes:
-      - 'c_vol:/usr/local/tomcat/webapps.dist'
+      - 'c_vol:/usr/local/tomcat/webapps'
 volumes:
   c_vol:
