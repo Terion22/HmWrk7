@@ -16,6 +16,7 @@ services:
     depends_on:
       - dev
     volumes:
+      - 'c_vol:/tmp/koddas/war-web-project/target'
       - 'c_vol:/usr/local/tomcat/webapps'
 volumes:
   c_vol:
