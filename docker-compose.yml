@@ -19,3 +19,4 @@ services:
       - 'c_vol:/opt/tomcat/webapps'
 volumes:
   c_vol:
+...
