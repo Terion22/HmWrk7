@@ -6,6 +6,6 @@ RUN apt update && \
     apt install maven -y
 WORKDIR /tmp/koddas
 RUN git clone https://github.com/boxfuse/boxfuse-sample-java-war-hello
-RUN chmod -R 777 /tmp/boxfuse/boxfuse-sample-java-war-hello
+RUN chmod -R 777 /tmp/boxfuse
 WORKDIR /tmp/boxfuse/boxfuse-sample-java-war-hello
 RUN mvn package
