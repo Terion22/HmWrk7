@@ -6,7 +6,7 @@ services:
       context: ./DEV
       dockerfile: Dockerfile
     volumes:
-      - 'c_vol:/tmp/boxfuse/boxfuse-sample-java-war-hell/target'
+      - 'vlm:/tmp/boxfuse/boxfuse-sample-java-war-hell/target'
   prd:
     build:
       context: ./PRD
@@ -16,7 +16,7 @@ services:
     depends_on:
       - dev
     volumes:
-      - 'c_vol:/opt/tomcat/webapps'
+      - 'vlm:/opt/tomcat/webapps'
 volumes:
-  c_vol:
+  vlm:
 ...

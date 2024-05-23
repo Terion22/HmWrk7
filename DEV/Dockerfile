@@ -1,4 +1,5 @@
 FROM ubuntu:18.04
+USER root
 RUN apt update && \
     apt install git -y && \
     apt install default-jdk -y && \
