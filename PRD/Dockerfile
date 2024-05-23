@@ -9,5 +9,5 @@ RUN mv apache-tomcat-8.5.100 /opt/tomcat/
 RUN rm apache-tomcat-8.5.100.tar.gz
 RUN chmod +x /opt/tomcat/bin/*.sh
 WORKDIR /usr/local/tomcat/webapps
-ADD /var/lib/docker/volumes/hmwrk7_c_vol/_data/wwp-1.0.0.war
+ADD /var/lib/docker/volumes/hmwrk7_c_vol/_data/wwp-1.0.0.war /usr/local/tomcat/webapps
 CMD ["/opt/tomcat/bin/catalina.sh","run"]
