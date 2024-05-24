@@ -6,5 +6,5 @@ RUN tar -xzvf apache-tomcat-8.5.100.tar.gz
 RUN mv apache-tomcat-8.5.100 /opt/tomcat/
 RUN rm apache-tomcat-8.5.100.tar.gz
 RUN chmod +x /opt/tomcat/bin/*.sh
-
+WORKDIR /opt/tomcat/webapps/examples
 CMD ["/opt/tomcat/bin/catalina.sh","run"]
