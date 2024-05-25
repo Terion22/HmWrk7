@@ -17,9 +17,9 @@ services:
       - dev
     volumes:
       - 'vlm:/opt/tomcat/webapps'
-      - '/home/elshl/HmWrk7/context.xml:/opt/tomcat//webapps/manager/META-INF/context.xml'
-      - '/home/elshl/HmWrk7/server.xml:/opt/tomcat/conf/server.xml'
-      - '/home/elshl/HmWrk7/tomcat-users.xml:/opt/tomcat/conf/tomcat-users.xml'
+      - '~/HmWrk7/context.xml:/opt/tomcat/webapps/manager/META-INF/context.xml'
+      - '~/HmWrk7/server.xml:/opt/tomcat/conf/server.xml'
+      - '~/HmWrk7/tomcat-users.xml:/opt/tomcat/conf/tomcat-users.xml'
 volumes:
   vlm:
 ...
