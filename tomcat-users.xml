@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <tomcat-users xmlns="http://tomcat.apache.org/xml"
               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-              xsi:schemaLocation="http://tomcat.apache.org/xml tomcat-users.xsd"
+              xsi:schemaLocation="http://tomcat.apache.org/xml tomcat-users.xml"
               version="1.0">
 
     <role rolename="manager-gui"/>
@@ -10,6 +10,6 @@
     <role rolename="manager-status"/>
     <role rolename="admin-gui"/>
     <role rolename="admin-script"/>
-    <user username="tomcat" password="tomcat" roles="manager-gui,manager-script,manager-jmx,manager-status,admin-gui,admin-script" />
+    <user username="name" password="pwd123" roles="admin-gui,manager-gui" />
 
 </tomcat-users>
