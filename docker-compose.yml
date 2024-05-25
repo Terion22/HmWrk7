@@ -16,10 +16,10 @@ services:
     depends_on:
       - dev
     volumes:
-      #- '/home/elshl/HmWrk7/context.xml:/opt/tomcat/webapps/manager/META-INF/context.xml'
-      #- '/home/elshl/HmWrk7/server.xml:/opt/tomcat/conf/server.xml'
-      #- '/home/elshl/HmWrk7/tomcat-users.xml:/opt/tomcat/conf/tomcat-users.xml'
-      - 'vlm:/opt/tomcat/webapps/ROOT'
+      - '/home/elshl/HmWrk7/context.xml:/opt/tomcat/webapps/manager/META-INF/context.xml'
+      - '/home/elshl/HmWrk7/server.xml:/opt/tomcat/conf/server.xml'
+      - '/home/elshl/HmWrk7/tomcat-users.xml:/opt/tomcat/conf/tomcat-users.xml'
+      - 'vlm:/opt/tomcat/webapps/manager'
 volumes:
   vlm:
 ...
