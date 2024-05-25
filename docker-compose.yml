@@ -6,7 +6,7 @@ services:
       context: ./DEV
       dockerfile: Dockerfile
     volumes:
-      - 'vlm:/tmp/boxfuse/boxfuse-sample-java-war-hell/target'
+      - 'vlm:/tmp/koddas/war-web-project/target'
   prd:
     build:
       context: ./PRD
