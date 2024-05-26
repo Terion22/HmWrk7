@@ -10,6 +10,6 @@
     <role rolename="manager-status"/>
     <role rolename="admin-gui"/>
     <role rolename="admin-script"/>
-    <user username="name" password="pwd123" roles="admin-gui,manager-gui" />
+    <user username="name" password="pwd123" roles="manager-gui,manager-status,manager-script,manager-jmx" />
 
 </tomcat-users>
