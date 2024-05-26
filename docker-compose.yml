@@ -19,7 +19,7 @@ services:
       - './context.xml:/opt/tomcat/webapps/manager/META-INF/context.xml'
       - './context.xml:/opt/tomcat/webapps/host-manager/META-INF/context.xml'
       - './tomcat-users.xml:/opt/tomcat/conf/tomcat-users.xml'
-      - 'vlm:/opt/tomcat/webapps/manager'
+      - 'vlm:/opt/tomcat/webapps'
 volumes:
   vlm:
 ...
